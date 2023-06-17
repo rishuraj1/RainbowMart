@@ -9,7 +9,7 @@ function getDate(event) {
   const year = date.getFullYear();
   return `${month} ${day}, ${year}`;
 }
-const Events = () => {
+const Events = ({ user, setUsers }) => {
   const database = new Databases(client);
   const [events, setEvents] = useState([]);
 

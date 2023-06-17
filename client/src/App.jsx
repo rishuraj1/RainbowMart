@@ -12,12 +12,12 @@ function App() {
     <BrowserRouter>
       <Navbar user={user} setUser={setUser} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<Signin  setUser={setUser} user={user}/>} />
+        <Route path="/" element={<Home setUser={setUser} user={user} />} />
+        <Route path="/signin" element={<Signin setUser={setUser} user={user} />} />
         <Route path="/signup" element={<Signup setUser={setUser} user={user} />} />
         <Route path="/aware" element={<Aware />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/events" element={<Events setUser={setUser} user={user} />} />
+        <Route path="/profile" element={<Profile setUser={setUser} user={user} />} />
       </Routes>
       <Footer />
     </BrowserRouter>

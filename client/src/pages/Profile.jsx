@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Profile = () => {
+const Profile = ({ user, setUser }) => {
   return (
     <div>Profile</div>
   )
