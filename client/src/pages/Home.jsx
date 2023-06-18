@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Databases, ID } from 'appwrite';
 import { client } from '../appwrite';
 import { FaUserAlt } from 'react-icons/fa';
+import { AiFillEdit } from 'react-icons/ai'
 
 const Home = ({ user, setUser }) => {
 
@@ -68,17 +69,14 @@ const Home = ({ user, setUser }) => {
             Post
           </button>
         </form>
-      </div>
-      {tweets.map(tweet => (
-        <div className="bg-gray-500 rounded-lg shadow p-4 mt-4 gap-3" key={tweet.id}>
-          <h3 className="text-xl font-bold">{tweet.author}</h3>
-          <div className='bg-cyan-600 p-2 rounded-lg justify-start items-start ml-5 mt-3'> 
-            <p className="text-black font-semibold">{tweet.content}</p>
+        {tweets.map(tweet => (
+          <div className="bg-white rounded-lg shadow p-4 mt-4" key={tweet.id}>
+            <h3 className="text-lg font-bold">{tweet.author}</h3>
+            <p className="text-gray-700">{tweet.content}</p>
+            <p className="text-gray-500 mt-2">{tweet.timestamp}</p>
           </div>
-          <p className="text-gray-900 mt-2">{tweet.timestamp}</p>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
   )
 }
 
