@@ -77,7 +77,10 @@ const Home = ({ user, setUser }) => {
           </div>
         ))}
       </div>
+
+    </div>
   )
 }
+
 
 export default Home
